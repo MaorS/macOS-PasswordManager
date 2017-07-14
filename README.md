@@ -1,6 +1,4 @@
-# macOS-PasswordManager
-Password Manager for macOS
-
+# Password Manager for macOS
 ### Features :
 - [x] Touch ID / Password Sign in
 - [x] Save Passwords & visibile state in Core data
@@ -11,7 +9,7 @@ Password Manager for macOS
 
 # Quick View
 #### Sign in using Touch ID + Add new App
-<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/1.gif" width="300">
+<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/1.gif" width="500">
 
 #### Search + Edit
 <img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/2.gif" width="500">
