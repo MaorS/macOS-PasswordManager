@@ -21,8 +21,7 @@ class AuthVC: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        goToNextVC()
-        //getAuth()
+        getAuth()
     }
     
     @IBAction func tryAgainAction(_ sender: NSButton) {
