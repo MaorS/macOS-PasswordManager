@@ -18,7 +18,7 @@
 <img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/2.gif" width="500">
 
 #### Click to copy
-<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media3.gif" width="500">
+<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/3.gif" width="500">
 
 #### Delete
 <img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/4.gif" width="500">
