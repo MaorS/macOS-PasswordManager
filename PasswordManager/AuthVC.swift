@@ -12,7 +12,6 @@ import LocalAuthentication
 class AuthVC: NSViewController {
     
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
-    
     @IBOutlet weak var tryAgainButton: NSButton!
     
     let context = LAContext()
@@ -97,7 +96,7 @@ class AuthVC: NSViewController {
     
     func goToNextVC(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-            self.performSegue(withIdentifier: "mainMenuSegue", sender: nil)
+            self.performSegue(withIdentifier: Constants.MAIN_MENU_SEGUE, sender: nil)
         }
     }
     

@@ -7,11 +7,13 @@
 //
 
 import Cocoa
+import CryptoSwift
 
 protocol DBManagerDelegate {
     func newAppDidAdded(app : App)
     func appDidEdit(oldApp : App, newApp : App)
-    //func appDidDeleted(app : App)
+    func appsEncryptionDidChange(apps : [App])
+    func appsDidRemove()
 }
 
 class DBManager: NSObject {
@@ -20,7 +22,38 @@ class DBManager: NSObject {
     private override init() {}
     var delegate : DBManagerDelegate?
     
-    // MARK: - Core Data stack
+    let key = "bbC2H19lkVbQDfakxcrtNMQdd0FloLyw" // length == 32
+    let iv = "gqLOHUioQ0QjhuvI" // length == 16
+    
+    
+    /// Encrypt string
+    func aesEncrypt(text : String) -> String {
+        guard let data = text.data(using: .utf8),
+            let encrypted = try? AES(key: key, iv: iv, blockMode: .CBC, padding: PKCS7()).encrypt([UInt8](data)) else{
+                return text
+        }
+        let encryptedData = Data(encrypted)
+        return encryptedData.base64EncodedString()
+    }
+    
+    /// Decrypt string
+    func aesDecrypt(text : String) -> String {
+        guard let data = Data(base64Encoded: text),
+            let decrypted = try? AES(key: key, iv: iv, blockMode: .CBC, padding: PKCS7()).decrypt([UInt8](data)) else{
+                return text
+        }
+        let decryptedData = Data(decrypted)
+        return String(bytes: decryptedData.bytes, encoding: .utf8) ?? text
+    }
+    
+    // MARK: -  Settings
+    
+    /// Check if the encryption enabled
+    var isEncryptionEnabled : Bool{
+        return UserDefaults.standard.bool(forKey: Constants.PASSWORD_ENCRYPTION)
+    }
+    
+    // MARK: -  DB
     
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
@@ -33,28 +66,59 @@ class DBManager: NSObject {
             debugPrint("Could not save. \(error), \(error.userInfo)")
         }
     }
-
     
+    /// Fetch apps list, with filter(optional)
     func fetchData(with filter : String? = nil,completion : ([App]) -> Void){
         let fetchRequest = NSFetchRequest<App>(entityName: "App")
         if let filter = filter {
-            let predicate =  NSPredicate(format: "appName CONTAINS[c] '\(filter)' || userName CONTAINS[c] '\(filter)'")
+            let predicate =  NSPredicate(format: "\(Constants.APP_NAME) CONTAINS[c] '\(filter)' || \(Constants.USERNAME) CONTAINS[c] '\(filter)'")
             fetchRequest.predicate = predicate
         }
         do {
-            let result = try context.fetch(fetchRequest)
+            let result: [App] = try context.fetch(fetchRequest)
             completion(result)
         } catch let error as NSError {
             debugPrint("Could not fetch. \(error), \(error.userInfo)")
         }
     }
     
+    /// Set/Unset encryption for the apps
+    func appsEncryptionEnabled(_ bool : Bool){
+        fetchData { (apps) in
+            _ =  apps.map({ app in
+                if app.isEncrypted{
+                    app.appName = aesDecrypt(text: app.appName )
+                    app.userName = aesDecrypt(text: app.userName )
+                    app.password = aesDecrypt(text: app.password )
+                }else{
+                    app.appName = aesEncrypt(text: app.appName )
+                    app.userName = aesEncrypt(text: app.userName )
+                    app.password = aesEncrypt(text: app.password )
+                }
+                
+                app.isEncrypted = bool
+                try? app.managedObjectContext?.save()
+                
+            })
+            self.delegate?.appsEncryptionDidChange(apps: apps)
+        }
+    }
+    
+    /// Add new app
     func addNewApp(appName : String, userName : String, password : String) {
         
         let app = App(context: context)
-        app.appName = appName
-        app.userName = userName
-        app.password = password
+        if isEncryptionEnabled{
+            app.appName  = aesEncrypt(text: appName)
+            app.userName = aesEncrypt(text: userName)
+            app.password = aesEncrypt(text: password)
+            app.isEncrypted = true
+        }else{
+            app.appName = appName
+            app.userName = userName
+            app.password = password
+        }
+        
         do {
             try app.managedObjectContext?.save()
             self.delegate?.newAppDidAdded(app: app)
@@ -64,11 +128,20 @@ class DBManager: NSObject {
         
     }
     
+    
+    /// Update exist app
     func updateExistApp(app : App, appName : String, userName : String, password : String){
         let oldApp = app
-        app.appName = appName
-        app.userName = userName
-        app.password = password
+        if isEncryptionEnabled{
+            app.appName  = aesEncrypt(text: appName)
+            app.userName = aesEncrypt(text: userName)
+            app.password = aesEncrypt(text: password)
+            app.isEncrypted = true
+        }else{
+            app.appName = appName
+            app.userName = userName
+            app.password = password
+        }
         do {
             try app.managedObjectContext?.save()
             self.delegate?.appDidEdit(oldApp: oldApp, newApp: app)
@@ -77,17 +150,32 @@ class DBManager: NSObject {
         }
     }
     
+    /// update app password visibilty
     func showPassFor(app : App, show : Bool){
         app.isPasswordVisible = show
         try? app.managedObjectContext?.save()
     }
     
+    /// Delete app
     func deleteApp(_ app : App){
-        
         context.delete(app)
         saveContext()
     }
     
+    /// Delete all apps
+    func deleteAllData(){
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "App"))
+        do {
+            try context.execute(deleteRequest)
+            self.delegate?.appsDidRemove()
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    
+    // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*

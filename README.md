@@ -1,6 +1,9 @@
 # Password Manager for macOS
 ### Features :
 - [x] Touch ID / Password Sign in
+- [x] AES Encryption 
+- [x] Auto Sign out
+- [x] Delete all
 - [x] Save Passwords & visibile state in Core data
 - [x] Search 
 - [x] Edit 
@@ -14,8 +17,14 @@
 #### Search + Edit
 <img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/2.gif" width="500">
 
-#### Show + delete + copy
-<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/3.gif" width="500">
+#### Click to copy
+<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media3.gif" width="500">
+
+#### Delete
+<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/4.gif" width="500">
+
+#### Settings
+<img src="https://github.com/MaorS/macOS-PasswordManager/blob/master/media/5.gif" width="500">
 
 # License
 Chat is available under the MIT license. See the LICENSE file for more info.

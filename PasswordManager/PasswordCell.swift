@@ -21,11 +21,23 @@ class PasswordCell: NSTableCellView {
         isPasswordVisible = sender.state == 1 ? true : false
     }
     
-    func didTapVisiblePasswordAction() {
+    func copyPasswordAction() {
         let text = visiblePasswordTextField.stringValue
         let pasteboard = NSPasteboard.general()
         pasteboard.declareTypes([NSPasteboardTypeString], owner: nil)
         pasteboard.setString(text, forType: NSPasteboardTypeString)
+    }
+    
+    func configCell(app : App, row : Int, listener vc: MainVC){
+        
+        if DBManager.manager.isEncryptionEnabled && app.isEncrypted{
+            self.passwordTextField.stringValue = DBManager.manager.aesDecrypt(text: app.password)
+        }else{
+            self.passwordTextField.stringValue = app.password
+        }
+        self.row = row
+        self.delegate = vc
+        self.isPasswordVisible = app.isPasswordVisible
     }
     
     

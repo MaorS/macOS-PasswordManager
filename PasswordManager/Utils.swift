@@ -7,8 +7,15 @@
 //
 
 import Cocoa
+
 class Utils{
     
+    /// Show alert 
+    /// - Parameters:
+    ///     - message: The Message to show
+    ///     - infoText: The bottom text of alert
+    ///     - cancelButton: To show cancel button, true by default
+    ///     - completion: *Bool* if the user did press ok
     class func showAlert(message : String, infoText : String,
                          cancelButton : Bool = true ,completion : ((Bool)->Void)? =  nil) {
         let alert = NSAlert()
@@ -22,23 +29,3 @@ class Utils{
         completion?(alert.runModal() == NSAlertFirstButtonReturn)
     }
 }
-/*
- extension NSTableView {
- override open func mouseDown(with event: NSEvent) {
- super.mouseDown(with: event)
- 
- let point    = convert(event.locationInWindow, from: nil)
- let rowIndex = row(at: point)
- 
- if rowIndex < 0 { // We didn't click any row
- deselectAll(nil)
- 
- }
- }
- }
- 
- protocol NSTableViewClickableDelegate: NSTableViewDelegate {
- func tableViewDidDeselectRow()
- // func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn, didClickRow row: Int)
- }
- */
