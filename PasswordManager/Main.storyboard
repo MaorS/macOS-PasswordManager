@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -662,7 +662,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PasswordManager" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="83" y="-56"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -974,11 +974,11 @@
             <objects>
                 <viewController id="IcF-vr-BMh" customClass="SettingsVC" customModule="PasswordManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ygp-5L-Crn">
-                        <rect key="frame" x="0.0" y="0.0" width="289" height="246"/>
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="256"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-6d-SC4">
-                                <rect key="frame" x="105" y="199" width="78" height="27"/>
+                                <rect key="frame" x="142.5" y="209" width="78" height="27"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Settings" id="Kcs-f2-IWu">
                                     <font key="font" size="23" name="HelveticaNeue-UltraLight"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -986,7 +986,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zkq-wQ-4gq">
-                                <rect key="frame" x="14" y="195" width="56" height="32"/>
+                                <rect key="frame" x="14" y="205" width="56" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="d3N-9p-E9m"/>
                                 </constraints>
@@ -999,13 +999,13 @@
                                 </connections>
                             </button>
                             <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="FIK-V6-EHT">
-                                <rect key="frame" x="20" y="20" width="249" height="159"/>
+                                <rect key="frame" x="20" y="20" width="323" height="169"/>
                                 <view key="contentView" id="88q-8V-1XZ">
-                                    <rect key="frame" x="1" y="1" width="247" height="157"/>
+                                    <rect key="frame" x="1" y="1" width="321" height="167"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="aFm-BS-zot">
-                                            <rect key="frame" x="18" y="121" width="211" height="18"/>
+                                            <rect key="frame" x="53" y="131" width="215" height="18"/>
                                             <buttonCell key="cell" type="check" title="Password Encryption" bezelStyle="regularSquare" imagePosition="left" alignment="right" inset="2" id="vbV-BQ-obH">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -1015,10 +1015,10 @@
                                             </connections>
                                         </button>
                                         <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NWN-IG-n46">
-                                            <rect key="frame" x="20" y="82" width="207" height="21"/>
+                                            <rect key="frame" x="55" y="92" width="211" height="21"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj3-rG-cdw">
-                                                    <rect key="frame" x="0.0" y="2" width="99" height="17"/>
+                                                    <rect key="frame" x="0.0" y="2" width="101.5" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Auto Logout" drawsBackground="YES" id="XKr-47-UI2">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1026,7 +1026,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tWG-8K-hJb">
-                                                    <rect key="frame" x="105" y="-3" width="105" height="26"/>
+                                                    <rect key="frame" x="107.5" y="-3" width="106.5" height="26"/>
                                                     <popUpButtonCell key="cell" type="push" title="Off" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Uu5-Ld-Ghd" id="fWA-Bq-ZeA">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="menu"/>
@@ -1055,11 +1055,184 @@
                                                 <real value="3.4028234663852886e+38"/>
                                             </customSpacing>
                                         </stackView>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tTE-TI-XgS">
-                                            <rect key="frame" x="14" y="34" width="219" height="32"/>
-                                            <buttonCell key="cell" type="push" title="Delete all passwords" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nL2-0d-nmJ">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LFe-eX-iV1">
+                                            <rect key="frame" x="49" y="44" width="223" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Import from CSV file" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Efr-Jp-XNO">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="importCSVFileAction:" target="IcF-vr-BMh" id="Yrm-Ep-UcQ"/>
+                                            </connections>
+                                        </button>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-C2-0uU">
+                                            <rect key="frame" x="2.5" y="-89" width="316" height="120"/>
+                                            <subviews>
+                                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-gz-9zK">
+                                                    <rect key="frame" x="0.0" y="49" width="316" height="46"/>
+                                                    <subviews>
+                                                        <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAs-0h-SFc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="46"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7w-Sz-KY2">
+                                                                    <rect key="frame" x="31.5" y="29" width="37" height="17"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="EQ6-4g-aNf">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gQU-6a-Ylv">
+                                                                    <rect key="frame" x="-2" y="-3" width="105" height="26"/>
+                                                                    <popUpButtonCell key="cell" type="push" title="App Name" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fUS-Ze-KYy" id="tIx-95-lG9">
+                                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="menu"/>
+                                                                        <menu key="menu" id="box-vW-CQW">
+                                                                            <items>
+                                                                                <menuItem title="App Name" state="on" id="fUS-Ze-KYy"/>
+                                                                                <menuItem title="User Name" id="kWB-ke-9td"/>
+                                                                                <menuItem title="Password" id="eYo-a8-Le1"/>
+                                                                            </items>
+                                                                        </menu>
+                                                                    </popUpButtonCell>
+                                                                    <connections>
+                                                                        <action selector="autoLogoutAction:" target="IcF-vr-BMh" id="O23-OS-5lW"/>
+                                                                    </connections>
+                                                                </popUpButton>
+                                                            </subviews>
+                                                            <visibilityPriorities>
+                                                                <integer value="1000"/>
+                                                                <integer value="1000"/>
+                                                            </visibilityPriorities>
+                                                            <customSpacing>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                            </customSpacing>
+                                                        </stackView>
+                                                        <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NlM-iO-anU">
+                                                            <rect key="frame" x="108" y="0.0" width="100" height="46"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-qU-ybB">
+                                                                    <rect key="frame" x="31.5" y="29" width="37" height="17"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="V7b-mu-rvD">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-l8-QAW">
+                                                                    <rect key="frame" x="-2" y="-3" width="105" height="26"/>
+                                                                    <popUpButtonCell key="cell" type="push" title="App Name" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="kme-oq-XwG" id="14K-ch-fba">
+                                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="menu"/>
+                                                                        <menu key="menu" id="XKA-5w-I8o">
+                                                                            <items>
+                                                                                <menuItem title="App Name" state="on" id="kme-oq-XwG"/>
+                                                                                <menuItem title="User Name" id="lcM-b5-3JY"/>
+                                                                                <menuItem title="Password" id="Pq0-yM-s4i"/>
+                                                                            </items>
+                                                                        </menu>
+                                                                    </popUpButtonCell>
+                                                                    <connections>
+                                                                        <action selector="autoLogoutAction:" target="IcF-vr-BMh" id="uJM-ho-hCb"/>
+                                                                    </connections>
+                                                                </popUpButton>
+                                                            </subviews>
+                                                            <visibilityPriorities>
+                                                                <integer value="1000"/>
+                                                                <integer value="1000"/>
+                                                            </visibilityPriorities>
+                                                            <customSpacing>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                            </customSpacing>
+                                                        </stackView>
+                                                        <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZ9-Q8-Ely">
+                                                            <rect key="frame" x="216" y="0.0" width="100" height="46"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfs-dy-9cM">
+                                                                    <rect key="frame" x="31.5" y="29" width="37" height="17"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="ukK-Zs-g3N">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2tQ-op-PSy">
+                                                                    <rect key="frame" x="-2" y="-3" width="105" height="26"/>
+                                                                    <popUpButtonCell key="cell" type="push" title="App Name" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="SGX-NF-IIa" id="pWO-Yx-5VH">
+                                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="menu"/>
+                                                                        <menu key="menu" id="Y5l-P8-w0x">
+                                                                            <items>
+                                                                                <menuItem title="App Name" state="on" id="SGX-NF-IIa"/>
+                                                                                <menuItem title="User Name" id="iUC-gb-RDJ"/>
+                                                                                <menuItem title="Password" id="syL-Um-Q05"/>
+                                                                            </items>
+                                                                        </menu>
+                                                                    </popUpButtonCell>
+                                                                    <connections>
+                                                                        <action selector="autoLogoutAction:" target="IcF-vr-BMh" id="4TG-VK-NT6"/>
+                                                                    </connections>
+                                                                </popUpButton>
+                                                            </subviews>
+                                                            <visibilityPriorities>
+                                                                <integer value="1000"/>
+                                                                <integer value="1000"/>
+                                                            </visibilityPriorities>
+                                                            <customSpacing>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                            </customSpacing>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <visibilityPriorities>
+                                                        <integer value="1000"/>
+                                                        <integer value="1000"/>
+                                                        <integer value="1000"/>
+                                                    </visibilityPriorities>
+                                                    <customSpacing>
+                                                        <real value="3.4028234663852886e+38"/>
+                                                        <real value="3.4028234663852886e+38"/>
+                                                        <real value="3.4028234663852886e+38"/>
+                                                    </customSpacing>
+                                                </stackView>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vX-h0-g7p">
+                                                    <rect key="frame" x="-2" y="103" width="320" height="17"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please select what is each column in your csv:" id="Dj1-HL-qBj">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q8A-7t-X0F">
+                                                    <rect key="frame" x="123" y="1" width="70" height="32"/>
+                                                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fpe-du-ReR">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="saveImportAction:" target="IcF-vr-BMh" id="sa2-7K-PT5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q8A-7t-X0F" firstAttribute="centerX" secondItem="7aq-gz-9zK" secondAttribute="centerX" id="D1F-eH-fY0"/>
+                                                <constraint firstItem="7aq-gz-9zK" firstAttribute="leading" secondItem="Mh2-C2-0uU" secondAttribute="leading" id="Gm4-3h-wfZ"/>
+                                                <constraint firstItem="7aq-gz-9zK" firstAttribute="width" secondItem="Mh2-C2-0uU" secondAttribute="width" id="Imi-Kk-RCR"/>
+                                                <constraint firstItem="8vX-h0-g7p" firstAttribute="top" secondItem="Mh2-C2-0uU" secondAttribute="top" id="XKD-AP-ykK"/>
+                                                <constraint firstItem="Q8A-7t-X0F" firstAttribute="top" secondItem="7aq-gz-9zK" secondAttribute="bottom" constant="20" symbolic="YES" id="c3h-pg-bcA"/>
+                                                <constraint firstItem="8vX-h0-g7p" firstAttribute="leading" secondItem="Mh2-C2-0uU" secondAttribute="leading" id="nbX-Eh-qIR"/>
+                                                <constraint firstAttribute="trailing" secondItem="8vX-h0-g7p" secondAttribute="trailing" id="q1b-KZ-cX8"/>
+                                                <constraint firstAttribute="height" constant="120" id="qcC-YJ-JY5"/>
+                                                <constraint firstItem="7aq-gz-9zK" firstAttribute="top" secondItem="8vX-h0-g7p" secondAttribute="bottom" constant="8" symbolic="YES" id="zCL-Cr-tVL"/>
+                                            </constraints>
+                                        </customView>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tTE-TI-XgS">
+                                            <rect key="frame" x="49.5" y="11" width="223" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Delete all passwords" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nL2-0d-nmJ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="13" name="LucidaGrande"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="deleteAllPasswordsAction:" target="IcF-vr-BMh" id="kBW-u7-dPm"/>
@@ -1067,21 +1240,29 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tTE-TI-XgS" secondAttribute="bottom" constant="20" id="0ek-uh-30d"/>
                                         <constraint firstItem="aFm-BS-zot" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="88q-8V-1XZ" secondAttribute="leading" constant="20" symbolic="YES" id="4Rg-zf-dkK"/>
                                         <constraint firstItem="aFm-BS-zot" firstAttribute="centerX" secondItem="88q-8V-1XZ" secondAttribute="centerX" id="4tp-tf-bdl"/>
-                                        <constraint firstItem="tTE-TI-XgS" firstAttribute="width" secondItem="NWN-IG-n46" secondAttribute="width" id="6ev-fE-skU"/>
-                                        <constraint firstItem="tTE-TI-XgS" firstAttribute="centerX" secondItem="88q-8V-1XZ" secondAttribute="centerX" id="C3r-6G-ZuK"/>
+                                        <constraint firstItem="LFe-eX-iV1" firstAttribute="top" secondItem="NWN-IG-n46" secondAttribute="bottom" constant="20" symbolic="YES" id="FfH-9f-8bF"/>
+                                        <constraint firstItem="tTE-TI-XgS" firstAttribute="centerX" secondItem="LFe-eX-iV1" secondAttribute="centerX" id="JsD-KW-6GJ"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aFm-BS-zot" secondAttribute="trailing" constant="20" symbolic="YES" id="ODf-FM-b8b"/>
+                                        <constraint firstItem="tTE-TI-XgS" firstAttribute="width" secondItem="LFe-eX-iV1" secondAttribute="width" id="Wir-Ov-cfF"/>
+                                        <constraint firstItem="tTE-TI-XgS" firstAttribute="top" secondItem="LFe-eX-iV1" secondAttribute="bottom" constant="12" symbolic="YES" id="ZI9-ge-eNh"/>
+                                        <constraint firstItem="LFe-eX-iV1" firstAttribute="width" secondItem="NWN-IG-n46" secondAttribute="width" id="Zw1-9q-1or"/>
                                         <constraint firstItem="aFm-BS-zot" firstAttribute="width" secondItem="NWN-IG-n46" secondAttribute="width" id="Zx5-F1-D70"/>
                                         <constraint firstItem="aFm-BS-zot" firstAttribute="top" secondItem="88q-8V-1XZ" secondAttribute="top" constant="20" symbolic="YES" id="bEJ-fD-yf8"/>
+                                        <constraint firstItem="Mh2-C2-0uU" firstAttribute="centerX" secondItem="LFe-eX-iV1" secondAttribute="centerX" id="eeG-W0-0ec"/>
                                         <constraint firstItem="NWN-IG-n46" firstAttribute="centerX" secondItem="88q-8V-1XZ" secondAttribute="centerX" id="fGz-m2-3FF"/>
-                                        <constraint firstItem="tTE-TI-XgS" firstAttribute="top" secondItem="NWN-IG-n46" secondAttribute="bottom" constant="20" id="hpG-1a-1sG"/>
+                                        <constraint firstItem="Mh2-C2-0uU" firstAttribute="width" secondItem="LFe-eX-iV1" secondAttribute="width" multiplier="1.5" id="ga6-Qj-2eB"/>
                                         <constraint firstItem="NWN-IG-n46" firstAttribute="top" secondItem="aFm-BS-zot" secondAttribute="bottom" constant="20" id="lCv-pw-6jf"/>
+                                        <constraint firstItem="Mh2-C2-0uU" firstAttribute="top" secondItem="LFe-eX-iV1" secondAttribute="bottom" constant="20" symbolic="YES" id="noK-PG-2zy"/>
+                                        <constraint firstItem="LFe-eX-iV1" firstAttribute="centerX" secondItem="NWN-IG-n46" secondAttribute="centerX" id="z1E-XJ-ipK"/>
                                     </constraints>
                                 </view>
                                 <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </box>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="iy1-uc-GcI">
+                                <rect key="frame" x="327" y="214.5" width="16" height="16"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FIK-V6-EHT" secondAttribute="trailing" constant="20" symbolic="YES" id="0NJ-Uo-01n"/>
@@ -1090,19 +1271,30 @@
                             <constraint firstAttribute="bottom" secondItem="FIK-V6-EHT" secondAttribute="bottom" constant="20" symbolic="YES" id="Gbr-Ve-NTj"/>
                             <constraint firstItem="dhA-6d-SC4" firstAttribute="centerY" secondItem="Zkq-wQ-4gq" secondAttribute="centerY" id="Ibs-Le-IgQ"/>
                             <constraint firstItem="dhA-6d-SC4" firstAttribute="centerX" secondItem="ygp-5L-Crn" secondAttribute="centerX" id="Q6Z-cH-c7d"/>
+                            <constraint firstItem="iy1-uc-GcI" firstAttribute="centerY" secondItem="dhA-6d-SC4" secondAttribute="centerY" id="QdQ-7r-Hsj"/>
                             <constraint firstItem="Zkq-wQ-4gq" firstAttribute="leading" secondItem="ygp-5L-Crn" secondAttribute="leading" constant="20" symbolic="YES" id="YQj-IG-Tvh"/>
+                            <constraint firstAttribute="trailing" secondItem="iy1-uc-GcI" secondAttribute="trailing" constant="20" symbolic="YES" id="cTF-C5-XP3"/>
                             <constraint firstItem="dhA-6d-SC4" firstAttribute="top" secondItem="ygp-5L-Crn" secondAttribute="top" constant="20" symbolic="YES" id="sBL-sO-OP6"/>
                             <constraint firstItem="FIK-V6-EHT" firstAttribute="top" secondItem="dhA-6d-SC4" secondAttribute="bottom" constant="20" id="uS3-rI-O3l"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteAllPasswordsTop" destination="ZI9-ge-eNh" id="Qtg-eX-kkH"/>
+                        <outlet property="importColumnLabel1" destination="F7w-Sz-KY2" id="Ojr-Ir-ryD"/>
+                        <outlet property="importColumnLabel2" destination="cW5-qU-ybB" id="zPQ-M3-TVo"/>
+                        <outlet property="importColumnLabel3" destination="Cfs-dy-9cM" id="zc3-iR-IvY"/>
+                        <outlet property="importColumnPopUp1" destination="gQU-6a-Ylv" id="afu-or-spq"/>
+                        <outlet property="importColumnPopUp2" destination="9o6-l8-QAW" id="df1-Tn-k5B"/>
+                        <outlet property="importColumnPopUp3" destination="2tQ-op-PSy" id="yM1-3z-G1L"/>
+                        <outlet property="importSelectCellsView" destination="Mh2-C2-0uU" id="gyl-OI-ntg"/>
                         <outlet property="logoutTimerPicker" destination="tWG-8K-hJb" id="luz-1i-k4P"/>
                         <outlet property="passwordEncryption" destination="aFm-BS-zot" id="vm9-jG-5AQ"/>
+                        <outlet property="progressIndicator" destination="iy1-uc-GcI" id="JGu-sG-jPN"/>
                     </connections>
                 </viewController>
                 <customObject id="eGo-bR-0Tb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="720"/>
+            <point key="canvasLocation" x="878.5" y="698"/>
         </scene>
         <!--Password EditorVC-->
         <scene sceneID="kb0-wG-gYu">
@@ -1366,6 +1558,6 @@
         <image name="icons8-settings" width="72" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P8p-wx-cFE"/>
+        <segue reference="YOo-A6-i6b"/>
     </inferredMetricsTieBreakers>
 </document>

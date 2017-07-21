@@ -1,8 +1,10 @@
 PODS:
   - CryptoSwift (0.6.9)
+  - CSV.swift (2.0.0)
 
 DEPENDENCIES:
   - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
+  - CSV.swift (~> 2.0)
 
 EXTERNAL SOURCES:
   CryptoSwift:
@@ -16,7 +18,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CryptoSwift: 138d0ffbc0c5ee40f7b7fc7b073c0f41e5d36dba
+  CSV.swift: 9219fd67bd5737c7f7ed1aeee093e28ff6f0e5b0
 
-PODFILE CHECKSUM: 1badc952425a0bde0c083110122f8c1e59723b34
+PODFILE CHECKSUM: b6446cae140235f101264f248cd4cd8b8bd936ae
 
 COCOAPODS: 1.2.1
